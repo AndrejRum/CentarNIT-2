@@ -24,7 +24,7 @@ function kalkulator(){
 
   }
 
-  console.log(vrednost)
+  
   vrednost = vrednost.toFixed(2);
   
   if(!stopa_inflacije.value|| !dolari.value|| !godine.value){
