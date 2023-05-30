@@ -46,14 +46,15 @@
 // /// ako je deljiv sa 2 i 3 
 // // fiz bas
 
-
+//Domaci
 
 
 function provera_deljivosti(broj){
+  
   if(broj % 3 === 0 && broj % 5 === 0){
     console.log('FizzBuzz');
-  }
-  if(broj % 3 === 0){
+    
+  }else  if(broj % 3 === 0){
     console.log('Fizz');
   }else if(broj % 5 === 0){
     console.log('Buzz');
@@ -61,4 +62,11 @@ function provera_deljivosti(broj){
   }else{
     console.log('Broj nije deljiv ni sa 3 ni sa 5 :<');
   }
+ 
 }
+
+
+
+
+
+provera_deljivosti(14);
