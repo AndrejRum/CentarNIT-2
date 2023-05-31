@@ -75,4 +75,4 @@ function provera_deljivosti(broj){
 
 
 
-provera_deljivosti(30);
+provera_deljivosti(Number(prompt('unesi broj za proveru')));
