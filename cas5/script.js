@@ -51,6 +51,9 @@
 
 function provera_deljivosti(broj){
   
+  if(broj === Number(broj)){
+
+  
   if(broj % 3 === 0 && broj % 5 === 0){
     console.log('FizzBuzz');
     
@@ -63,10 +66,13 @@ function provera_deljivosti(broj){
     console.log('Broj nije deljiv ni sa 3 ni sa 5 :<');
   }
  
+}else{
+  console.log('Greska pri unosu podatka');
+}
 }
 
 
 
 
 
-provera_deljivosti(14);
+provera_deljivosti(30);
