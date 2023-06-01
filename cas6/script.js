@@ -15,9 +15,9 @@
 
 let  niz = [];
 let duzina;
- duzina =Number(prompt('Unesite koliko cete brojeva uneti'));
+ duzina =Number(prompt('Unesite koliko cete elemenata uneti'));
 for(let i = 0; i < duzina; i++){
-  niz[i] = prompt(`Unesite ${i + 1}. broj`);
+  niz[i] = prompt(`Unesite ${i + 1}. element`);
   
 }
 
