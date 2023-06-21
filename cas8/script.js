@@ -24,10 +24,14 @@
 
 // console.log(nekiNiz2);
 
-let nekaMbcatrica = [
-[3,4,9]
-[13,17,43],
-[1,33,4]
+let nekaMbcatrica = [[3, 4, 9][(13, 17, 43)], [1, 33, 4]];
 
-];
+console.log(nekaMbcatrica);
 
+for (let i = 0; i < nekaMbcatrica.length; i++) {
+
+}
+
+
+let neki_br = 1 ;
+let    neki_drugi = 3 ;

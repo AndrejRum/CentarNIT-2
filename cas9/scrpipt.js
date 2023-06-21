@@ -15,3 +15,11 @@ let noviNiz = niz.map((el) => {
 
 
 console.log(noviNiz);
+
+
+
+
+
+
+"AI in Everyday Life: How AI Is Shaping Our World"
+
