@@ -29,6 +29,81 @@
 // let ime = ' Andrej';
 // let prezime = ' Rumenic';
 
+class Osoba {
+  constructor(ime, prezime, email, password) {
+    this.ime = ime;
+    this.prezime = prezime;
+    this.email = email;
+    this.password = password;
+    this.kupljeneKnjige = [];
+  }
+
+  kupiKnjigu(knjiga) {
+    this.kupljeneKnjige.push(knjiga);
+    console.log(`Knjiga '${knjiga}' je dodata u listu kupljenih knjiga.`);
+  }
+
+  prikaziKupljeneKnjige() {
+    if (this.kupljeneKnjige.length > 0) {
+      console.log("Lista kupljenih knjiga:");
+      this.kupljeneKnjige.forEach((knjiga) => {
+        console.log(`- ${knjiga}`);
+      });
+    } else {
+      console.log("Niste kupili nijednu knjigu.");
+    }
+  }
+}
+
+// Glavni deo programa
+const osobe = []; // Niz svih osoba
+
+while (true) {
+  console.log("\nOdaberite opciju:");
+  console.log("1 - Kreiraj novu osobu");
+  console.log("2 - Prikaži kupljene knjige");
+  console.log("3 - Kupi knjigu");
+  console.log("4 - Izlaz");
+
+  const opcija = prompt("Unesite opciju:");
+
+  if (opcija === "1") {
+    const ime = prompt("Unesite ime:");
+    const prezime = prompt("Unesite prezime:");
+    const email = prompt("Unesite email:");
+    const password = prompt("Unesite password:");
+
+    const novaOsoba = new Osoba(ime, prezime, email, password);
+    osobe.push(novaOsoba);
+
+    console.log("Nova osoba je kreirana.");
+  } else if (opcija === "2") {
+    const indeks = prompt("Unesite indeks osobe:");
+
+    if (indeks >= 0 && indeks < osobe.length) {
+      const osoba = osobe[indeks];
+      osoba.prikaziKupljeneKnjige();
+    } else {
+      console.log("Neispravan indeks osobe.");
+    }
+  } else if (opcija === "3") {
+    const indeks = prompt("Unesite indeks osobe:");
+    const knjiga = prompt("Unesite naziv knjige:");
+
+    if (indeks >= 0 && indeks < osobe.length) {
+      const osoba = osobe[indeks];
+      osoba.kupiKnjigu(knjiga);
+    } else {
+      console.log("Neispravan indeks osobe.");
+    }
+  } else if (opcija === "4") {
+    break;
+  } else {
+    console.log("Nepoznata opcija.");
+  }
+}
+
+
 
 
 // ispis('Andrej', 'Rumenic', funkc1, funkc2)
